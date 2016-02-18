@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angularJS</title>
+</head>
+<body style="padding:10px;" ng-app="app">
+<div ng-controller="FCtrl">
+    <input type="text" class="text" ng-model="data.msg">
+    <h2>{{data.msg}}</h2>
+</div>
+<div ng-controller="SCtrl">
+    <input type="text" class="text" ng-model="data.msg">
+    <h2>{{data.msg}}</h2>
+</div>
+</body>
+<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="services/appAngularTest.js"></script>
+</html>
