@@ -3,36 +3,29 @@
  */
 var express = require('express');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 module.exports = function(){
     console.log('init express...');
     var app = express();
     app.use(bodyParser.json());
-    app.use(express.static("./public"));
 
-    app.set('view engine','./views');
-    app.set("view engine","ejs");
+    //app.use(express.static(path.join(__dirname,'public')));
+
+    //app.set('view engine','./views');
+    //app.set('view engine','../views2');
+    app.set('views',  'views');
+    app.set('view engine','ejs');
+
+    app.use(express.static("./public"));
 
     require('../app/routes/news.server.routes')(app);
     require('../app/routes/main.server.routes')(app);
-
-
-
-    app.route('/test')
-        .get(function(req,res,next){
-            //res.sendfile('public/indexAngular.html');
-            res.render('index',{title:'Express'});
-            //res.json();
-
-        })
-        .post(function(req,res,next){
-            res.send("index post message...");
-            res.sendfile('indexpost.html');
-        });
+    require('../app/routes/props.server.routes')(app);
 
 
     app.route('/testview').get(function(req,res){
-        res.sendfile('../view/viewtest.html');
+        res.send('meesage test..');
     });
 
     app.use(function(req,res,next){

@@ -1,12 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title><%= title%></title>
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="services/web/web.client.service.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/curvewrecker/css/curvewrecker.css">
+    <link rel="stylesheet" href="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="font/HappyZcool.css"/>
 </head>
-<body>
-    <h1>
-        <%=title%>
-    </h1>
+<script>
+    $(document).ready(function(){
+        $("#classInfo").mCustomScrollbar();
+        $(".questionScroll").mCustomScrollbar();
+    });
+</script>
+<body class="bg" ng-controller="MainCtrl">
+    <div id="currentUserInfo"  style="display:none;"><%= currentUserInfo%></div>
+    <div id="UserId" ng-bing="" style="display:none;"><%= userId%></div>
+    <div id="Points" ng-bing="" style="display:none;"><%= Points%></div>
+    <div id="Experience" ng-bing="" style="display:none;"><%= Experience%></div>
+    <div id="ClassId" ng-bing="" style="display:none;"><%= ClassId%></div>
+
+    <div id="Props1" style="display:none;"><%= Props1%></div>
+    <div id="Props2" style="display:none;"><%= Props2%></div>
+    <div id="Props3" style="display:none;"><%= Props3%></div>
+
+    <div ng-bind="ngUserId" style="display: none;"></div>
+    <div ng-bind="ngPoints" style="display: none;"></div>
+    <div ng-bind="ngExperience" style="display: none;"></div>
+    <div ng-bind="ngClassId" style="display: none;"></div>
+    <div ng-bind="ngProps1" style="display: none;"></div>
+    <div ng-bind="ngProps2" style="display: none;"></div>
+    <div ng-bind="ngProps3" style="display: none;"></div>
+
+    <div class="container">
+        <div>
+            <img src="img/web/title.png" alt="" class="center-block" style="width: 45%;">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6" >
+                    <div style="background-image: url(img/web/btnuserInfo.png);background-repeat:no-repeat;height:430px;background-position: 70px;">
+                        <img src="img/web/titleuserInfo.png" alt="" class="center-block" style="padding-top: 30px;">
+                        <div class="center-block">
+                            <div class="col-sm-offset-1 col-sm-4">
+                                <img src="img/web/h1.png" alt="" class="center-block" style="padding-left: 60px;">
+                            </div>
+                            <div class="col-sm-4" style="">
+                                <div style="font-size:34px;font-family: '微软雅黑';padding-top: 60px;padding-left: 30px;font-style: inherit;color:#995300;"><%=realName%></div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
+                        <div style="padding-left: 45px;">
+                            <div class="col-sm-4">
+                                <div style="padding-left: 90px;background-color: red;">
+                                    <img src="img/web/usericon.png" alt="" style="width: 65%;" class="pull-right">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <span style="color: #955848;font-family: '微软雅黑';font-size: 24px;font-style:italic;" class="text-left">{{ngExperience}} 总分</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding-left: 45px;">
+                            <div class="col-sm-4">
+                                <div style="padding-left: 90px;background-color: red;">
+                                    <img src="img/web/usericon2.png" alt="" style="width: 65%;" class="pull-right">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <span style="color: #955848;font-family: '微软雅黑';font-size: 24px;font-style:italic;" class="text-left">LV 13   等级</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="img/web/btnexchangepoint.png" alt="" class="center-block" ng-click="exchangepoint()" style="cursor:pointer;">
+                        </div>
+                    </div>
+
+                    <div style="background-image: url(img/web/bgprop.png);background-repeat:no-repeat;height:430px;background-position: 70px;">
+                        <img src="img/web/titleuserInfo.png" alt="" class="center-block" style="padding-top: 40px;">
+
+                        <div style="margin-top:20px;padding-left:160px;">
+                            <img src="img/web/item1.png" alt="" style="width:60px;height: 60px;" class="pull-left">
+                            <div style="font-size: 24px;font-family: '微软雅黑';color: #955848;margin-left: 25px;padding-top:10px;" class="pull-left">冰冻对手  X {{ngProps1}}</div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div style="margin-top:10px;padding-left:160px;">
+                            <img src="img/web/item2.png" alt="" style="width:60px;height: 60px;" class="pull-left">
+                            <div style="font-size: 24px;font-family: '微软雅黑';color: #955848;margin-left: 25px;padding-top:10px;" class="pull-left">增加时间  X {{ngProps2}}</div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div style="margin-top:10px;padding-left:160px;">
+                            <img src="img/web/item3.png" alt="" style="width:60px;height: 60px;" class="pull-left">
+                            <div style="font-size: 24px;font-family: '微软雅黑';color: #955848;margin-left: 25px;padding-top:10px;" class="pull-left">增加时间  X {{ngProps3}}</div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div>
+                            <img src="img/web/btnexchangeprop.png" alt="" style="cursor:pointer;" class="center-block" ng-click="exchangeprop()">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div style="background-image: url(img/web/bgpk.png);background-repeat:no-repeat;height:230px;">
+                        <div style="font-size: 24px;font-family: '微软雅黑';color: #955848;margin-right: 150px;margin-top: 40px;padding-top: 15px;" class="pull-right">在线人数:1</div>
+                        <div class="clearfix"></div>
+                        <img src="img/web/btnallpk.png" alt="" class="center-block" style="padding-left: 140px;cursor:pointer;" ng-click="allPk()">
+                    </div>
+
+
+                    <div style="background-image: url(img/web/bgclass.png);background-repeat:no-repeat;height:640px;" id="Stest">
+                        <img src="img/web/titleclass.png" alt="" class="center-block" style="padding-top: 80px;">
+                        <div style="margin-left:70px;">
+                            <div id="classInfo" style="height: 400px;width: 420px;">
+                             <div>
+                                <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                      <div style="margin-top: 40px;">1</div>
+                                </div>
+                                 <div class="pull-left">
+                                          <img src="img/web/h2.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                 </div>
+                                  <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                      <div style="margin-top: 20px;">
+                                          <div>姓名</div>
+                                          <div>LV.13</div>
+                                      </div>
+                                  </div>
+                                  <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                      <div style="margin-top: 30px;">25,389</div>
+
+                                  </div>
+                                  <div class="pull-left" style="margin-left:20px;">
+                                      <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                  </div>
+                                <div class="clearfix"></div>
+                                </div>
+
+                                <div id="temp">
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">2</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h3.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">3</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h4.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">4</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h5.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">5</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h6.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">6</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h7.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">7</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h8.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">8</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h9.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">9</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h1.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size:18px;color: #955848;width: 20px;">
+                                            <div style="margin-top: 40px;">10</div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <img src="img/web/h4.png" alt="" style="width: 80px;height: 80px;margin-left: 10px;">
+                                        </div>
+                                        <div class="pull-left" style="font-family: '微软雅黑';font-size: 20px;margin-left: 20px;color: #955848;">
+                                            <div style="margin-top: 20px;">
+                                                <div>姓名</div>
+                                                <div>LV.13</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left" style="margin-left: 20px;font-family: '微软雅黑';font-size: 20px;font-style: oblique;color: #955848;">
+                                            <div style="margin-top: 30px;">25,389</div>
+
+                                        </div>
+                                        <div class="pull-left" style="margin-left:20px;">
+                                            <img src="img/web/btnchallenge.png" alt="" style="margin-top: 20px;cursor: pointer" ng-click="classPk()">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include propModal.ejs%>
+    <%- include pointModal.ejs%>
+    <%- include pkModal.ejs%>
+    <%- include resultModal.ejs%>
+    <%- include questionListModal.ejs%>
 </body>
 </html>

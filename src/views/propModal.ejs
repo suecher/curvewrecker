@@ -1,0 +1,66 @@
+<div class="modal fade" id="propModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg" style="margin-top: 200px;height: 500px;border-radius: 16px;opacity: 0.9">
+            <img src="img/web/shoptitle.png" alt="" class="center-block" style="margin-top: 20px;">
+            <div style="font-size:20px;font-family: '微软雅黑';margin-top: 10px;" class="text-center">
+                <span>当前积分</span>
+                <span id="propModalPoint">{{ngPoints}}</span>
+            </div>
+            <br>
+            <div class="itembg" style="margin-left: 70px;margin-right: 70px;">
+                <table class="table table-condensed" style="border-width: 0px;">
+                    <tr>
+                        <td style="vertical-align: middle;border-width:0px;">
+                            <img src="img/web/item1.png" class="img-responsive" style="float:left;position: relative; left:-30px;width: 60px;height: 60px;"/>
+                        </td>
+                        <td style="vertical-align: middle;border-width:0px;width: 60%;">
+                            <div class="milkyblack shoppropname" style="font-size: 1.1em;font-family: '微软雅黑';">冰冻对手 x <span id="prop1Num">{{ngProps1}}</span></div>
+                            <div class="shoppropdescribe" style="font-family: '微软雅黑';">冻结对手，5秒内不能答题。
+                                （全网PK时使用）</div>
+                        </td>
+                        <td style="vertical-align: middle;border-width:0px;">
+                            <img src="img/web/bug50.png"  id="btnBugyProp1" alt="" ng-click="buyprop(1)" style="width: 70px;height: 43px;cursor: pointer;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="itembg" style="margin-left: 70px;margin-right: 70px;margin-top: 15px;">
+                <table class="table table-condensed" style="border-width: 0px;">
+                    <tr>
+                        <td style="vertical-align: middle;border-width:0px;">
+                            <img src="img/web/item2.png" class="img-responsive" style="float:left;position: relative; left:-30px;width: 60px;height: 60px;"/>
+                        </td>
+                        <td style="vertical-align: middle;border-width:0px;width: 60%;">
+                            <div class="milkyblack shoppropname" style="font-size: 1.1em;font-family: '微软雅黑';">增加时间 x <span id="prop1Num">{{ngProps2}}</span></div>
+                            <div class="shoppropdescribe" style="font-family: '微软雅黑';">增加答题时间15秒，不计入答题计时中。</div>
+                        </td>
+                        <td style="vertical-align: middle;border-width:0px;">
+                            <img src="img/web/bug50.png"  id="btnBugyProp1" alt="" ng-click="buyprop(2)" style="width: 70px;height: 43px;cursor:pointer;"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="itembg" style="margin-left: 70px;margin-right: 70px;margin-top: 15px;">
+                <table class="table table-condensed" style="border-width: 0px;">
+                    <tr>
+                        <td style="vertical-align: middle;border-width:0px;">
+                            <img src="img/web/item3.png" class="img-responsive" style="float:left;position: relative; left:-30px;width: 60px;height: 60px;"/>
+                        </td>
+                        <td style="vertical-align: middle;border-width:0px;width: 60%;">
+                            <div class="milkyblack shoppropname" style="font-size: 1.1em;font-family: '微软雅黑';">答案筛选 x <span id="prop1Num">{{ngProps3}}</span></div>
+                            <div class="shoppropdescribe" style="font-family: '微软雅黑';">随机去掉一个错误答案。</div>
+                        </td>
+                        <td style="vertical-align: middle;border-width:0px;">
+                            <img src="img/web/bug50.png"  id="btnBugyProp1" alt="" ng-click="buyprop(3)" style="width: 70px;height: 43px;cursor:pointer;"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.bg
+{
+    background-image: url(../../../img/web/bg.jpg);
+    background-size: 100%;
+}
+.itembg
+{
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6c58f), to(#daae6e));
+    border-width: 3px;
+    border-style: solid;
+    border-color: #fff6d8;
+    border-radius: 8px;
+    margin-left: 1.5em;
+    margin-right: 0.8em;
+    max-height: 75px;
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
+}
+.questionItembg
+{
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6c58f), to(#daae6e));
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff6d8;
+    border-radius: 8px;
+    margin-left: 0.3em;
+    max-height: 80px;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    color: #000;font-family:'微软雅黑', Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+    padding: 5px;
+    margin-left: 8%;
+    margin-right: 8%;
+    font-width:bolder;
+}

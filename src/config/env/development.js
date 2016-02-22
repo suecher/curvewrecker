@@ -3,5 +3,6 @@
  */
 module.exports = {
     port:7101,
+    //mongodb://username:password@hostname:port/test
     mongodb: 'mongodb://localhost/curvewrecker'
-}
+};

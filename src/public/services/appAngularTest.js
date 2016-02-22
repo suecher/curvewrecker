@@ -10,4 +10,4 @@ angular.module('app',[])
 })
 .controller('SCtrl',function($scope){
     $scope.data = {msg:'我是第二个'}
-})
+});
