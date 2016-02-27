@@ -38,8 +38,8 @@ angular.module('app',[])
     };
 
     $scope.allPk = function(){
-        //$("#resultModal").modal();
-        $("#questionModal").modal();
+        $("#pkloadingtModal").modal();
+        //$("#questionModal").modal();
     };
 
     $scope.classPk = function(){
