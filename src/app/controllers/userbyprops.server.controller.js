@@ -47,7 +47,7 @@ module.exports = {
                             console.log(err);
                             return;
                         }
-                        console.log("购买成功");
+
                         next();
                     });
                 }

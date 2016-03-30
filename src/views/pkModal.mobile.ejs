@@ -36,7 +36,7 @@
                     <div>
                         <div class="userbg center-block" style="padding: 1.5em 1em 2em 1em; width: 95%;min-height: 250px;">
                             <div id="subjectPanle">
-                                <div class="text-center" id="subjectAnalyzeTitle" style="font-size:1rem;color: #ab5912;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">{{questionContent}}</div>
+                                <div class="text-center" id="subjectAnalyzeTitle" style="font-size:1.4rem;color: #ab5912;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">{{questionContent}}</div>
                                 <div ng-repeat="item in questionItem_list">
                                     <div class="questionItembg Analyze {{item.is_right}}" ng-click="clickAnswer($index,pkquestionid,item.sort_no,item.is_right,item.question_item_content)">
                                         {{item.question_item_content}}

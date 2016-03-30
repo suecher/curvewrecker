@@ -179,7 +179,7 @@
         margin-bottom: 0.5em;
         color: #fff;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
         padding: 5px;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .rightquestionItembg
     {
@@ -310,40 +310,17 @@
             <table class="" id="" style="border-width: 0px;margin-top: 0em;" ng-repeat="item in ngClassInfoList">
                 <tbody >
                 <tr>
-                    <th scope="row" style="vertical-align: middle;border-width:0px;font-family: HappyZcool581597;font-size: 28px;color: brown;">{{$index +1}}</th>
-                    <td class="usericon" style="border-width:0px;background:url({{'img/mobile/' + item.headImg}});background-repeat:no-repeat;  background-position:0px 2px;  background-size: 65px 80px;  height:58px;  width:65px;  float:left;"></td>
-                    <td style="border-width:0px;vertical-align: middle;width: 35%;">
+                    <th class="row" style="vertical-align: middle;border-width:0px;font-family: HappyZcool581597;font-size: 24px;color: brown;width: 90px;">{{$index +1}}</th>
+                    <td class="usericon" style="border-width:0px;background:url({{'img/mobile/' + item.headImg}});background-repeat:no-repeat;width: 100px;  background-position:0px 2px;  background-size: 65px 80px;  height:58px;  width:65px;  float:left;"></td>
+                    <td style="border-width:0px;vertical-align: middle;width: 300px;">
                         <div style="font-size: 16px;" class="milky">{{item.realName}}</div>
                         <div style="font-size: 16px;font-family: HappyZcool581597;" class="milky">LV.{{item.level}}</div>
                     </td>
-                    <td class="milky" style="border-width:0px;vertical-align: middle;font-family: HappyZcool581597;font-size: 20px;width: 10%;" >{{item.currentExperience}}</td>
-                    <td style="border-width:0px;vertical-align: middle;width: 30%;"><img src="img/mobile/pkcomputer.png" class="img-responsive center-block" ng-click="classPk(item.userId,item.headImg,item.realName,true)"/></td>
+                    <td class="milky" style="border-width:0px;vertical-align: middle;font-family: HappyZcool581597;font-size: 20px;" >{{item.currentExperience}}</td>
+                    <td style="border-width:0px;vertical-align: middle;width: 200px;"><img src="img/mobile/pkcomputer.png" class="img-responsive center-block" style="width: 100px;" ng-click="classPk(item.userId,item.headImg,item.realName,true)"/></td>
                 </tr>
                 </tbody>
-                <tbody>
-                <tr>
-                    <th scope="row" style="vertical-align: middle;border-width:0px;font-family: HappyZcool581597;font-size: 28px;color: brown;">{{$index +1}}</th>
-                    <td class="usericon" style="border-width:0px;background:url({{'img/mobile/' + item.headImg}});background-repeat:no-repeat;  background-position:0px 2px;  background-size: 65px 80px;  height:58px;  width:65px;  float:left;"></td>
-                    <td style="border-width:0px;vertical-align: middle;width: 35%;">
-                        <div style="font-size: 16px;" class="milky">{{item.realName}}</div>
-                        <div style="font-size: 16px;font-family: HappyZcool581597;" class="milky">LV.{{item.level}}</div>
-                    </td>
-                    <td class="milky" style="border-width:0px;vertical-align: middle;font-family: HappyZcool581597;font-size: 20px;width: 10%;" >{{item.currentExperience}}</td>
-                    <td style="border-width:0px;vertical-align: middle;width: 30%;"><img src="img/mobile/pkcomputer.png" class="img-responsive center-block" ng-click="classPk(item.userId,item.headImg,item.realName,true)"/></td>
-                </tr>
-                </tbody>
-                <tbody>
-                <tr>
-                    <th scope="row" style="vertical-align: middle;border-width:0px;font-family: HappyZcool581597;font-size: 28px;color: brown;">{{$index +1}}</th>
-                    <td class="usericon" style="border-width:0px;background:url({{'img/mobile/' + item.headImg}});background-repeat:no-repeat;  background-position:0px 2px;  background-size: 65px 80px;  height:58px;  width:65px;  float:left;"></td>
-                    <td style="border-width:0px;vertical-align: middle;width: 35%;">
-                        <div style="font-size: 16px;" class="milky">{{item.realName}}</div>
-                        <div style="font-size: 16px;font-family: HappyZcool581597;" class="milky">LV.{{item.level}}</div>
-                    </td>
-                    <td class="milky" style="border-width:0px;vertical-align: middle;font-family: HappyZcool581597;font-size: 20px;width: 10%;" >{{item.currentExperience}}</td>
-                    <td style="border-width:0px;vertical-align: middle;width: 30%;"><img src="img/mobile/pkcomputer.png" class="img-responsive center-block" ng-click="classPk(item.userId,item.headImg,item.realName,true)"/></td>
-                </tr>
-                </tbody>
+
             </table>
         </div>
     </div>

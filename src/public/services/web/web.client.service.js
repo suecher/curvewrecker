@@ -253,26 +253,51 @@ angular.module('app',[])
 
 
     $scope.clientuseprop = function(propId){
+
+        //根据判断。判断相应的道具是否还有。如果没有就直接返回，不做操作.
+        switch (propId){
+            case 1:
+                if($scope.ngProps1<=0) {
+                    return;
+                }
+                break;
+            case 2:
+                break;
+                if($scope.ngProps2<=0) {
+                    return;
+                }
+            case 3:
+                if($scope.ngProps3<=0) {
+                    return;
+                }
+                break;
+        }
+
         $http.post('/useprop/',{"userId":currentUserInfo.userId,"propId":propId})
             .success(function(data){
                 switch (propId){
                     case 1:
-                        $scope.ngProps1 = parseInt($scope.ngProps1) - 1;
-
+                        if($scope.ngProps1>0){
+                            $scope.ngProps1 = parseInt($scope.ngProps1) - 1;
+                        }
                         break;
                     case 2:
-                        $scope.ngProps2 = parseInt($scope.ngProps2) - 1;
-                        $scope.countdown += 5;
+                        if($scope.ngProps2>0) {
+                            $scope.ngProps2 = parseInt($scope.ngProps2) - 1;
+                            $scope.countdown += 5;
+                        }
 
                         break;
                     case 3:
-                        $scope.ngProps3 = parseInt($scope.ngProps3) - 1;
-                        if($(".false").length > 1){
-                            $(".false:gt(0)").hide();
-                        }
+                        if($scope.ngProps3>0) {
+                            $scope.ngProps3 = parseInt($scope.ngProps3) - 1;
+                            if ($(".false").length > 1) {
+                                $(".false:gt(0)").hide();
+                            }
 
-                        if($(".false").length > 2){
-                            $(".false:gt(1)").hide();
+                            if ($(".false").length > 2) {
+                                $(".false:gt(1)").hide();
+                            }
                         }
                         break;
                 }
@@ -483,7 +508,7 @@ angular.module('app',[])
         .error(function(){
             alert('购买失败');
         });
-    }
+    };
 
 
 
