@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script src="http://cdn.bootcss.com/socket.io/1.4.5/socket.io.js"></script>
+
+    <script type="text/javascript" src="lib/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="lib/curvewrecker/css/curvewrecker.css">
+    <script src="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+
+
+
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/lib/client/jquery.fittext.js"></script>
+    <script src="/lib/client/resLoader.js"></script>
+    <script src="/lib/client/jquery-ui.min.js"></script>
+    <script src="/lib/client/controller/main.js"></script>
+    <script src="/lib/client/controller/shop.js"></script>
+    <script src="/lib/client/controller/AllPk.js"></script>
+    <script src="/lib/client/controller/PKWindow.js"></script>
+    <script src="/lib/client/controller/analyze.js"></script>
+    <script src="/lib/client/controller/analyzelist.js"></script>
+    <link rel="stylesheet" href="/lib/client/font/HappyZcool.css"/>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/client/animate.css">
+    <link rel="stylesheet" href="lib/sweetalert/dist/sweetalert.css">
+
+    <link rel="stylesheet" href="lib/curvewrecker/css/curvewrecker.css">
+
+    <script type="text/javascript" src="services/web/web.client.service.js"></script>
+    <link rel="stylesheet" href="themes/blue/pace-theme-center-simple.css" />
+    <script src="pace.min.js"></script>
+
+    <script type="text/javascript"
+            src="http://www.163css.com/myweb/hihilinxuan/template/hihilinxuan/cssjs/2012/12/ifengtouch/js/jquery.touchSwipe.min.js"></script>
+
+    <title></title>
+</head>
+
+<style>
+    body {
+        font: 16px/1.8 sans-serif;overflow: hidden;
+    }
+    .bg{
+        background:url(img/mobile/bg.png);
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size:100% 100%;
+        background-size:100% 100%;
+        background-color: #8189d2;
+    }
+    .userbg{
+        background:url(img/mobile/userbg.png);
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+
+    .shopbg{
+        background:url(img/mobile/bgshop.png);
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+    .milky {
+        font-family: 微软雅黑,Heiti SC,Helvetica,Droidsansfallback,Droid Sans,"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+        text-transform: uppercase;
+        /*display: block;*/
+        color: #ab5912;
+        text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fde49d;
+        font-weight: bold;
+    }
+    .milkyblack {
+        font-family: 微软雅黑,Heiti SC,Helvetica,Droidsansfallback,Droid Sans,"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+        text-transform: uppercase;
+        /*display: block;*/
+        color: #fff;
+        text-shadow: 0 1px 1px #000, 0px -1px   1px #000;
+        font-weight: bold;
+    }
+    .text1
+    {
+        background-image: url(img/mobile/usericon.png);
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        font-size: 20px;
+        margin-left: 5px;
+        text-align: left;
+        text-indent:50px;
+        font-family:HappyZcool581597;
+    }
+    .text2
+    {
+        background-image: url(img/mobile/usericon2.png);
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        font-size: 20px;
+        margin-left: 5px;
+        text-align: left;
+        text-indent:50px;
+        font-family:HappyZcool581597;
+    }
+    .usericon {
+        background-repeat:no-repeat;
+        background-position:0px 2px;
+        background-size: 65px 80px;
+        height:58px;
+        width:65px;
+        float:left;
+    }
+    .itembg
+    {
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6c58f), to(#daae6e));
+        border-width: 3px;
+        border-style: solid;
+        border-color: #fff6d8;
+        border-radius: 8px;
+        margin-left: 1.5em;
+        margin-right: 0.8em;
+        max-height: 75px;
+        margin-top: 0.4em;
+        margin-bottom: 0.5em;
+    }
+    .pkbg1
+    {
+        background:url(img/mobile/pkbg1.png);
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+    .pkbg2
+    {
+        background:url(img/mobile/pkbg2.png);
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+    .pkhaderbg
+    {
+        background:url(img/mobile/pkheadbg.png);
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+    .propbg
+    {
+        background:url(img/mobile/propbg.png);
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+    .pkuser1
+    {
+
+    }
+    .pkuser2
+    {
+
+    }
+    .questionItembg
+    {
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6c58f), to(#daae6e));
+        border-width: 2px;
+        border-style: solid;
+        border-color: #fff6d8;
+        border-radius: 8px;
+        margin-left: 0.3em;
+        max-height: 80px;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        color: #fff;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    .rightquestionItembg
+    {
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6c58f), to(#daae6e));
+        border-width: 2px;
+        border-style: solid;
+        border-color: #00E466;
+        border-radius: 8px;
+        margin-left: 0.3em;
+        max-height: 80px;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        font-size:0.6em;color: #fff;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+        padding: 5px;
+    }
+    .btnanswerAnalyzeError
+    {
+        color: #ee3148;
+    }
+
+    .btnanswerAnalyzeRight
+    {
+        color:#009140;
+    }
+
+    .AnalyzeSubPanle
+    {
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6c58f), to(#daae6e));
+        border-width: 2px;
+        border-style: solid;
+        border-color: #fff6d8;
+        border-radius: 8px;
+        margin-left: 0.3em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        padding: 5px;
+    }
+
+</style>
+<body class="bg" ng-controller="MainCtrl">
+<!--<audio controls="controls" autoplay="true" controls="false" style="display: none;">-->
+<!--<source src="bgsound.ogg" />-->
+<!--<source src="bgsound.mp3" />-->
+<!--<source src="bgsound.wav" />-->
+<!--</audio>-->
+
+<div id="currentUserInfo"  style="display:none;"><%= currentUserInfo%></div>
+<div id="UserId" ng-bing="" style="display:none;"><%= userId%></div>
+<div id="HeadImg" ng-bing="" style="display:none;"><%= headImg%></div>
+<div id="Points" ng-bing="" style="display:none;"><%= Points%></div>
+<div id="Experience" ng-bing="" style="display:none;"><%= Experience%></div>
+<div id="ClassId" ng-bing="" style="display:none;"><%= ClassId%></div>
+<div id="RealName" ng-bing="" style="display:none;"><%= realName%></div>
+<div id="Level" ng-bing="" style="display:none;"><%= Level%></div>
+
+<div id="Props1" style="display:none;"><%= Props1%></div>
+<div id="Props2" style="display:none;"><%= Props2%></div>
+<div id="Props3" style="display:none;"><%= Props3%></div>
+
+<div ng-bind="ngUserId" style="display: none;"></div>
+<div ng-bind="ngPoints" style="display: none;"></div>
+<div ng-bind="ngExperience" style="display: none;"></div>
+<div ng-bind="ngClassId" style="display: none;"></div>
+<div ng-bind="ngProps1" style="display: none;"></div>
+<div ng-bind="ngProps2" style="display: none;"></div>
+<div ng-bind="ngProps3" style="display: none;"></div>
+
+<div class="container-fluid" id="containerTitle" style="display: none;">
+    <img src="img/mobile/title.png" class="img-responsive" alt="Responsive image">
+</div>
+<div class="container-fluid" id="headImg" style="display: none;">
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-8 col-xs-offset-2">
+            <img src="img/mobile/txt1.png" class="img-responsive center-block">
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 2em;">
+        <div class="col-xs-3"><img src="img/mobile/h1.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h2.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h3.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h4.png" class="img-responsive center-block"></div>
+    </div>
+    <div class="row" style="margin-top: 2em;">
+        <div class="col-xs-3"><img src="img/mobile/h5.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h6.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h7.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h8.png" class="img-responsive center-block"></div>
+    </div>
+    <div class="row" style="margin-top: 2em;">
+        <div class="col-xs-3"><img src="img/mobile/h9.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h10.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h11.png" class="img-responsive center-block"></div>
+        <div class="col-xs-3"><img src="img/mobile/h12.png" class="img-responsive center-block"></div>
+    </div>
+
+    <div class="row" style="margin-top: 4em;">
+        <div class="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+            <img src="img/mobile/btnselecthead.png" class="img-responsive center-block">
+        </div>
+    </div>
+</div>
+<br>
+<script>
+    $(document).ready(function(){
+        //
+
+
+        $("#classlistscrollbar").mCustomScrollbar();
+    });
+</script>
+<!--用户信息-->
+<div id="containerUser" class="container" style="display: none;">
+    <div class="glyphicon glyphicon-chevron-left pull-left" style="position: relative;font-size: 14px;top:14em;right:0.5em;color: #fff;" id="btnMainLeft"></div>
+    <div class="glyphicon glyphicon-chevron-right pull-right" style="position: relative;font-size: 14px;top:14em;left:0.5em;color: #fff;" id="btnMainRight"></div>
+    <div class="userbg center-block" style="padding: 0.5em 1em 1em 1em; width: 92%;">
+        <div class="row" style="margin-top: 1em;" id="slidemain">
+            <div class="col-xs-4">
+                <img ng-src={{"img/web/"+headImg}} style="width: 100%;">
+            </div>
+            <div class="col-xs-7">
+                <div class="milky text-center" id="txtTrueName"><%=realName%></div>
+                <div class="text1 milky text-center">{{ngExperience}}</div>
+                <div class="text2 milky text-center">LV {{ngLevel}}   等级</div>
+            </div>
+        </div>
+        <div id="classlistscrollbar" style="height: 280px;">
+            <table class="" id="" style="border-width: 0px;margin-top: 0em;" ng-repeat="item in ngClassInfoList">
+                <tbody >
+                <tr>
+                    <th scope="row" style="vertical-align: middle;border-width:0px;font-family: HappyZcool581597;font-size: 28px;color: brown;">{{$index +1}}</th>
+                    <td class="usericon" style="border-width:0px;background:url({{'img/mobile/' + item.headImg}});background-repeat:no-repeat;  background-position:0px 2px;  background-size: 65px 80px;  height:58px;  width:65px;  float:left;"></td>
+                    <td style="border-width:0px;vertical-align: middle;width: 35%;">
+                        <div style="font-size: 16px;" class="milky">{{item.realName}}</div>
+                        <div style="font-size: 16px;font-family: HappyZcool581597;" class="milky">LV.{{item.level}}</div>
+                    </td>
+                    <td class="milky" style="border-width:0px;vertical-align: middle;font-family: HappyZcool581597;font-size: 20px;width: 10%;" >{{item.currentExperience}}</td>
+                    <td style="border-width:0px;vertical-align: middle;width: 30%;"><img src="img/mobile/pkcomputer.png" class="img-responsive center-block" ng-click="classPk(item.userId,item.headImg,item.realName,true)"/></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <th scope="row" style="vertical-align: middle;border-width:0px;font-family: HappyZcool581597;font-size: 28px;color: brown;">{{$index +1}}</th>
+                    <td class="usericon" style="border-width:0px;background:url({{'img/mobile/' + item.headImg}});background-repeat:no-repeat;  background-position:0px 2px;  background-size: 65px 80px;  height:58px;  width:65px;  float:left;"></td>
+                    <td style="border-width:0px;vertical-align: middle;width: 35%;">
+                        <div style="font-size: 16px;" class="milky">{{item.realName}}</div>
+                        <div style="font-size: 16px;font-family: HappyZcool581597;" class="milky">LV.{{item.level}}</div>
+                    </td>
+                    <td class="milky" style="border-width:0px;vertical-align: middle;font-family: HappyZcool581597;font-size: 20px;width: 10%;" >{{item.currentExperience}}</td>
+                    <td style="border-width:0px;vertical-align: middle;width: 30%;"><img src="img/mobile/pkcomputer.png" class="img-responsive center-block" ng-click="classPk(item.userId,item.headImg,item.realName,true)"/></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <th scope="row" style="vertical-align: middle;border-width:0px;font-family: HappyZcool581597;font-size: 28px;color: brown;">{{$index +1}}</th>
+                    <td class="usericon" style="border-width:0px;background:url({{'img/mobile/' + item.headImg}});background-repeat:no-repeat;  background-position:0px 2px;  background-size: 65px 80px;  height:58px;  width:65px;  float:left;"></td>
+                    <td style="border-width:0px;vertical-align: middle;width: 35%;">
+                        <div style="font-size: 16px;" class="milky">{{item.realName}}</div>
+                        <div style="font-size: 16px;font-family: HappyZcool581597;" class="milky">LV.{{item.level}}</div>
+                    </td>
+                    <td class="milky" style="border-width:0px;vertical-align: middle;font-family: HappyZcool581597;font-size: 20px;width: 10%;" >{{item.currentExperience}}</td>
+                    <td style="border-width:0px;vertical-align: middle;width: 30%;"><img src="img/mobile/pkcomputer.png" class="img-responsive center-block" ng-click="classPk(item.userId,item.headImg,item.realName,true)"/></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div style="margin-top: 5px;">
+    </div>
+</div>
+<!--商店信息-->
+<div id="containerShop" class="container" style="display: none;">
+    <div class="glyphicon glyphicon-chevron-right pull-right" style="position: relative;font-size: 14px;top:14em;left:0.5em;color: #fff;" id="btnShopRight"></div>
+    <div><img src="img/mobile/shoptitle.png" class="img-responsive" id="shoptitle" width="35%" style="float: right;" /></div>
+    <div class="shopbg" style="padding: 0.5em 0.5em 1em 1em; width: 100%;">
+        <br/>
+        <div>
+            <div class="text-center milkyblack" style="color: #fff;font-family: HappyZcool581597;font-size: 22px;" >当前积分 <span id="currentPoint">{{ngPoints}}</span></div>
+        </div>
+        <br/>
+
+        <div class="itembg">
+            <table class="table table-condensed" style="border-width: 0px;">
+                <tr>
+                    <td style="vertical-align: middle;border-width:0px;">
+                        <img src="img/mobile/item1.png" class="img-responsive" style="float:left;position: relative; left:-20px;"/>
+                    </td>
+                    <td style="vertical-align: middle;border-width:0px;width: 60%;">
+                        <div class="milkyblack shoppropname" style="font-size: 1.1em;font-family: HappyZcool581597;">冰冻对手 x <span id="prop1Num">{{ngProps1}}</span></div>
+                        <div class="shoppropdescribe" style="font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">冻结对手，5秒内不能答题。
+                            （全网PK时使用）</div>
+                    </td>
+                    <td style="vertical-align: middle;border-width:0px;">
+                        <img src="img/mobile/bug50.png" class="img-responsive"  ng-click="buyprop(1)" alt=""/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="itembg">
+            <table class="table table-condensed" style="border-width: 0px;">
+                <tr>
+                    <td style="vertical-align: middle;border-width:0px;">
+                        <img src="img/mobile/item2.png" class="img-responsive" style="float:left;position: relative; left:-20px;"/>
+                    </td>
+                    <td style="vertical-align: middle;border-width:0px;width: 60%;">
+                        <div class="milkyblack shoppropname" style="font-size: 1.1em;font-family: HappyZcool581597;">增加时间 x <span id="prop2Num">{{ngProps2}}</span></div>
+                        <div class="shoppropdescribe" style="font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">增加答题时间15秒，不计入答题计时中。</div>
+                    </td>
+                    <td style="vertical-align: middle;border-width:0px;">
+                        <img src="img/mobile/bug50.png" class="img-responsive" ng-click="buyprop(2)" alt=""/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="itembg">
+            <table class="table table-condensed" style="border-width: 0px;">
+                <tr>
+                    <td style="vertical-align: middle;border-width:0px;">
+                        <img src="img/mobile/item3.png" class="img-responsive" style="float:left;position: relative; left:-20px;"/>
+                    </td>
+                    <td style="vertical-align: middle;border-width:0px;width: 60%;">
+                        <div class="milkyblack shoppropname" style="font-size: 1.1em;font-family: HappyZcool581597;">答案筛选 x <span id="prop3Num">{{ngProps3}}</span></div>
+                        <div class="shoppropdescribe" style="font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">随机去掉一个错误答案</div>
+                    </td>
+                    <td style="vertical-align: middle;border-width:0px;">
+                        <img src="img/mobile/bug50.png" class="img-responsive"  ng-click="buyprop(3)" alt=""/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--PK信息-->
+<div id="containerAllPk" style="display: none;">
+    <div class="glyphicon glyphicon-chevron-left pull-left" style="position: relative;font-size: 14px;top:14em;right:-0.2em;color: #fff;" id="btnAllPkLeft"></div>
+    <img src="img/mobile/pktitle.png" class="img-responsive" width="36%" style="float: right;position: relative;bottom:15px;" id="pktitle" />
+    <div class="container" >
+
+        <div class="pkbg1" style="padding: 0.7em;max-height: 200px;">
+            <table class="">
+                <tr>
+                    <td style="width: 55%;">
+                        <img ng-src={{"img/web/"+headImg}} alt="" class="img-responsive center-block" style="width: 150%;"/>
+                    </td>
+                    <td style="width: 45%;">
+                        <br/>
+                        <div>
+                            <div class="milky text-center" style="font-size:26px;" ><%=realName%></div>
+                            <div class="milky text-center" style="font-size:26px;margin-left: 0.2em;font-family: HappyZcool581597;" >LV {{ngLevel}} </div>
+                            <div class="milky text-center" style="font-size:28px;margin-left: 0.2em;font-family: HappyZcool581597;" ></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br/>
+    <div class="container">
+        <div class="pkbg1" style="padding: 0.7em;max-height: 200px;">
+            <div id="onlineInfo">
+                <img src="img/mobile/onlineuser.png" class="img-responsive center-block" style="width: 45%;" alt=""/>
+                <div class="milkyblack text-center" style="font-family: HappyZcool581597;font-size: 24px;" id="txtonlineCount">{{onlineCount}}</div>
+            </div>
+
+            <img src="img/mobile/btnonlinePK.png" class="img-responsive center-block" style="width: 65%;margin-bottom: 1em;margin-top:1em;" id="" alt="" ng-click="allPk()"/>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+</div>
+
+<div id="containerAnalyzeList" style="display: none;">
+    <div class="userbg center-block" style="padding: 1.2em 1em 1em 1em; width: 92%;">
+        <div class="AnalyzeSubPanle">
+            <div class="text-center AnalyzeSub" style="color: #ab5912;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">1 .词语：鼠目寸光、雪中送炭、事半功倍、腰缠万贯、
+                名副其实的反义词，最恰当的一组是。</div>
+
+            <div class="btnanswerAnalyze" >
+                A.胸怀大志 锦上添花 一箭双雕 一贫如洗
+            </div>
+
+            <div class="btnanswerAnalyze">
+                B.目光远大 莫不关心 事倍功半 衣衫褴褛
+            </div>
+
+            <div class="btnanswerAnalyzeRight">
+                C.高瞻远瞩 锦上添花 事倍功半 一贫如洗
+            </div>
+
+            <div class="btnanswerAnalyzeError">
+                D.高瞻远瞩 莫不关心 一箭双雕 衣衫褴褛
+            </div>
+        </div>
+
+        <div class="AnalyzeSubPanle">
+            <div class="text-center AnalyzeSub" style="color: #ab5912;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">2．选择恰当的词语填在文中的（ ）里。</div>
+
+            <div class="btnanswerAnalyze" >
+                A．心旷神怡
+            </div>
+
+            <div class="btnanswerAnalyze">
+                B，馋涎欲滴
+            </div>
+
+            <div class="btnanswerAnalyzeRight">
+                C．风景如画
+            </div>
+
+            <div class="btnanswerAnalyzeError">
+                D．驰名中外
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="containerAnalyze" style="display: none;">
+    <div class="userbg center-block" style="padding: 1.2em 1em 1em 1em; width: 92%;">
+        <div id="subjectAnalyzePanle">
+            <div class="text-center" id="subjectAnalyzeTitle" style="color: #ab5912;font-family: Heiti SC,Helvetica,Droidsansfallback,Droid Sans,Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;">1 .词语：鼠目寸光、雪中送炭、事半功倍、腰缠万贯、
+                名副其实的反义词，最恰当的一组是。</div>
+
+            <div class="questionItembg Analyze" >
+                A.胸怀大志 锦上添花 一箭双雕 一贫如洗
+            </div>
+
+            <div class="rightquestionItembg Analyze">
+                B.目光远大 莫不关心 事倍功半 衣衫褴褛
+            </div>
+
+            <div class="questionItembg Analyze">
+                C.高瞻远瞩 锦上添花 事倍功半 一贫如洗
+            </div>
+
+            <div class="questionItembg Analyze">
+                D.高瞻远瞩 莫不关心 一箭双雕 衣衫褴褛
+            </div>
+        </div>
+        <div class="row textContent1 container" style="color:#ab5912;">
+            <div class="col-xs-6 text-center">
+                正确答案:B
+            </div>
+            <div class="col-xs-6 text-center">
+                您选择了:A
+            </div>
+        </div>
+        <div class="row textContent1 container" style="color:#ab5912;">
+            <span style="color: #ee3148;">知识点:</span>
+            <span>
+                正确使用词语、熟语 划分句子成分及复句关系 辨析解释字义、词义 诗文默写 古诗词阅读
+            </span>
+        </div>
+        <div class="row textContent1 container" style="color:#ab5912;">
+            <span style="color: #ee3148;">解析:</span>
+            <span>
+                从命题选材上看，相比较2012供材料作文的形式，关于梯子不用，是应该“竖着放”，还是“横着放”？的材料，材料选取萧伯纳的名言，属于观点性材料，较2012年的命题更注重理性，审题的门槛也相对高些。
+            </span>
+        </div>
+        <div class="row container">
+            <div class="col-xs-offset-2 col-xs-4 col-xs-offset-1">
+                <img src="img/mobile/btnback.png" class="img-responsive center-block" alt=""/>
+            </div>
+            <div class="  col-xs-offset-2 col-xs-4 ">
+                <img src="img/mobile/btnnext.png" class="img-responsive center-block" alt=""/>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-xs-offset-2 col-xs-8 ">
+                <img src="img/mobile/btncloseparsing.png" id="btncloseparsing" class="col-xs-offset-1 img-responsive center-block col-xs-offset-1" alt=""/>
+            </div>
+
+        </div>
+    </div>
+    <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
+
+</div>
+<div id="shopmodal" data-target="#shopmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="opacity: 0.9;margin-top: 35%;">
+    <div class="modal-dialog">
+
+
+        <div class="container">
+
+            <img src="img/mobile/shopwindow.png" class="img-responsive center-block"  alt=""/>
+            <table class="table">
+                <tr>
+                    <td style="border-width: 0px;">
+                        <img src="img/mobile/btnok.png" class="img-responsive center-block" id="btnOkProp" style="width: 45%;"   alt=""/>
+                    </td>
+                    <td style="border-width: 0px;">
+                        <img src="img/mobile/btnno.png" class="img-responsive center-block" id="btnNoProp" style="width: 45%;"  alt=""/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="exitmodal" data-target="#exitmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="opacity: 0.9;margin-top: 35%;">
+    <div class="modal-dialog">
+        <div class="container">
+            <img src="img/mobile/tuichu.png" class="img-responsive center-block"  alt=""/>
+            <table class="table">
+                <tr>
+                    <td style="border-width: 0px;">
+                        <img src="img/mobile/btnok.png" class="img-responsive center-block" id="btnOk" style="width: 45%;"   alt=""/>
+                    </td>
+                    <td style="border-width: 0px;">
+                        <img src="img/mobile/btnno.png" class="img-responsive center-block" id="btnNo" style="width: 45%;"  alt=""/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="defeatedmodal" data-target="#defeatedmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="opacity: 0.9;margin-top: 35%;">
+    <div class="modal-dialog">
+        <div class="container">
+            <img src="img/mobile/defeated.png" class="img-responsive center-block"  alt=""/>
+            <table class="table">
+                <tr>
+                    <td style="border-width: 0px;">
+                        <img src="img/mobile/btnquestionanalysis.png" class="img-responsive center-block" id="btnquestionanalysis2" style="width: 45%;"  alt=""/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="victorymodal" data-target="#victorymodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="opacity: 0.9;margin-top: 35%;">
+    <div class="modal-dialog">
+        <div class="container">
+            <img src="img/mobile/victory.png" class="img-responsive center-block"  alt=""/>
+            <table class="table">
+                <tr>
+                    <td style="border-width: 0px;">
+                        <img src="img/mobile/btnquestionanalysis.png" class="img-responsive center-block" id="btnquestionanalysis" style="width: 45%;"  alt=""/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include waitModal.ejs%>
+<%- include propModal.ejs%>
+<%- include pointModal.ejs%>
+<%- include pkModal.mobile.ejs%>
+<%- include resultModal.mobile.ejs%>
+<%- include questionListModal.ejs%>
+<%- include pkloadingtModal.ejs%>
+</body>
+<script>
+    $(document).ready(function(){
+        //$("#victorymodal").show();
+    })
+</script>
+<script>
+    paceOptions = {
+        elements: true
+    };
+</script>
+<script>
+    function load(imgpath){
+
+        var x = new XMLHttpRequest();
+        var x1 = new XMLHttpRequest();
+        x.open('GET', imgpath, true);
+        //x1.open('GET', "3.jpg", true);
+        x.send();
+        //x1.send();
+    };
+
+
+    Pace.on('hide', function(){
+        console.log('done');
+        //mainInit();
+        //$("#containerAnalyzeList").show();
+        //
+        //$(".shoppropdescribe").fitText(1.4);
+        $("#containershop").show();
+        mainInit();
+        shopInit();
+
+    });
+</script>
+<script type="text/javascript">
+    //    $("#subjectPanle").fitText(1.2);
+    //    $("#subjectTitle").fitText(2.5);
+    //    $("#headImg").hide();
+    //    $("#text3").show();
+    //    $("#txtTrueName2").fitText();
+    //    $("#subjectPanle").fitText();
+    //    $("#subjectTitle").fitText();
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <title>用户测试页</title>
+</head>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/web' ,
+                dataType:'json',
+                data:{
+                        "user_id" : "75e29223-0a80-415c-96a4-9d8334a0a46b",
+                        "real_name" : "学生一",
+                        "gender" : "男",
+                        "img_head_url" :  "",
+                        "current_points" :  0,
+                        "class_info" : {
+                            "class_id": "9a66d008-ca10-4c02-b569-b980b7a3817b",
+                            "class_name": "99班"
+                        }},
+                success: function(data){
+
+                }
+            });
+        });
+
+
+        $("#btn2").click(function(){
+
+        });
+
+
+        $("#btn3").click(function(){
+
+        });
+    });
+</script>
+<body>
+<div>用户1</div>
+<input type="button" value="用户1" id="btn1">
+
+<br>
+
+<div>用户2</div>
+<input type="button" value="用户1" id="btn2">
+
+<br>
+
+<div>用户3</div>
+<input type="button" value="用户1" id="btn3">
+
+<br>
+
+
+</body>
+</html>

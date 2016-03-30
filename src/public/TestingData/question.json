@@ -1,9 +1,81 @@
 {
-  "total_num": 9,
+  "total_num": 6,
   "question_list":    [
     {
       "level": 0.8,
-      "question_content": "<p>图标<img border=\"0\" hspace=\"0\" src=\"http://10.0.0.54:18970/rc/v1/common/get_file/9b756f982b8d52dcd65fb74dbbf4203e.jpeg\" width=\"40\" height=\"35\">所警示的是(  )<\/p><p>",
+      "question_content": "在螺纹联接的防松方法中，弹簧垫圈属于(  )防松",
+      "parent_id": null,
+      "child_question_list": null,
+      "question_id": "46b31a23-8c5e-4aea-b74f-0c6e10776c11",
+      "question_note": "<p>本题考查学生对常用危险化学品标志的识别。题中图标是易燃物质的标志。<\/p>",
+      "question_type": "108000",
+      "answer_list": [{
+        "score": 0,
+        "sort_no": 0,
+        "question_answer_content": "1"
+      }],
+      "item_list":[
+        {
+          "sort_no": 0,
+          "is_right": false,
+          "question_item_content": "A.利用摩擦"
+        },
+        {
+          "sort_no": 1,
+          "is_right": false,
+          "question_item_content": "B.利用机械"
+        },
+        {
+          "sort_no": 2,
+          "is_right": true,
+          "question_item_content": "C.永久"
+        },
+        {
+          "sort_no": 3,
+          "is_right": false,
+          "question_item_content": "D.无利用"
+        }
+      ]
+    },
+    {
+      "level": 0.8,
+      "question_content": "在带传动中，当传递的功率一定时，带速降低则传递的圆周力就(  )，就容量发生打滑 ",
+      "parent_id": null,
+      "child_question_list": null,
+      "question_id": "46b31a23-8c5e-4aea-b74f-0c6e10776c12",
+      "question_note": "<p>本题考查学生对常用危险化学品标志的识别。题中图标是易燃物质的标志。<\/p>",
+      "question_type": "108000",
+      "answer_list": [         {
+        "score": 0,
+        "sort_no": 0,
+        "question_answer_content": "1"
+      }],
+      "item_list":[
+        {
+          "sort_no": 0,
+          "is_right": false,
+          "question_item_content": "A.减小"
+        },
+        {
+          "sort_no": 1,
+          "is_right": false,
+          "question_item_content": "B.明显地减小"
+        },
+        {
+          "sort_no": 2,
+          "is_right": true,
+          "question_item_content": "C.增大"
+        },
+        {
+          "sort_no": 3,
+          "is_right": false,
+          "question_item_content": "D.明显地增大"
+        }
+      ]
+    },
+    {
+      "level": 0.8,
+      "question_content": "一齿轮传动中，主动轮齿数为100，转速为1000转／分，从动轮齿数为200，则从动轮转速为",
       "parent_id": null,
       "child_question_list": null,
       "question_id": "46b31a23-8c5e-4aea-b74f-0c6e10776c16",
@@ -18,284 +90,130 @@
         {
           "sort_no": 0,
           "is_right": false,
-          "question_item_content": "当心火灾——氧化物<\/p><p>"
-        },
-        {
-          "sort_no": 1,
-          "is_right": true,
-          "question_item_content": "当心火灾——易燃物质<\/p><p>"
-        },
-        {
-          "sort_no": 2,
-          "is_right": false,
-          "question_item_content": "当心爆炸——自燃物质<\/p><p>"
-        },
-        {
-          "sort_no": 3,
-          "is_right": false,
-          "question_item_content": "当心爆炸——爆炸性物质"
-        }
-      ]
-    },
-    {
-      "level": 0.2,
-      "question_content": "<p> 常温下a mol/L CH<span style=\"vertical-align:sub\">3<\/span>COOH稀溶液和b mol/L KOH稀溶液等体积混合, 下列判断一定错误的是(  )<\/p><p>+<\/span>)<><><span style=\"vertical-align:sub\">3COO<span style=\"vertical-align:super\">-<\/span>), a<\/span><><\/p>",
-      "parent_id": null,
-      "child_question_list": null,
-      "question_id": "fbbfef3e-d683-45ff-acca-cc15d86d21ed",
-      "question_note": null,
-      "question_type": "108000",
-      "answer_list": [         {
-        "score": 0,
-        "sort_no": 0,
-        "question_answer_content": "3"
-      }],
-      "item_list":          [
-        {
-          "sort_no": 0,
-          "is_right": false,
-          "question_item_content": "若c(OH<span style=\"vertical-align:super\">-<\/span>)&gt;c(H<span style=\"vertical-align:super\">+<\/span>), a=b<\/p><p>"
+          "question_item_content": "A.2000转／分"
         },
         {
           "sort_no": 1,
           "is_right": false,
-          "question_item_content": "若c(K<span style=\"vertical-align:super\">+<\/span>)&gt;c(CH<span style=\"vertical-align:sub\">3<\/span>COO<span style=\"vertical-align:super\">-<\/span>), a&gt;b<\/p><p>"
+          "question_item_content": "B.1000转／分"
         },
         {
           "sort_no": 2,
-          "is_right": false,
-          "question_item_content": "若c(OH<span style=\"vertical-align:super\">-<\/span>)=c(H<span style=\"vertical-align:super\">+<\/span>), a&gt;b<\/p><p>"
+          "is_right": true,
+          "question_item_content": "C.500转／分"
         },
         {
           "sort_no": 3,
-          "is_right": true,
-          "question_item_content": "若c(K<span style=\"vertical-align:super\">"
+          "is_right": false,
+          "question_item_content": "D.250转／分"
         }
       ]
     },
     {
-      "level": 0.5,
-      "question_content": "<p> (14分)氯化亚铜(CuCl) 是有机合成工业中应用较广泛的催化剂,微溶于水,不溶于乙醇。工业上以废旧铜为原料生产氯化亚铜的流<img src=\"http://10.0.0.54:18970/rc/v1/common/get_file/f9ff49580b5f9c4b034965de95dcec82.png\" width=\"3\" height=\"2\">程如下:<\/p><p><img src=\"http://10.0.0.54:18970/rc/v1/common/get_file/3067efbcd7bf6d255e5ebff36582916d.png\" width=\"477\" height=\"114\"><\/p><p>(l) 写出过程①的主要化学方程式_________。<\/p><p>(2) 分析下表,析出CuCl晶体时的最佳pH为_________;<\/p><table style=\"border-collapse:collapse\" class=\" noBorderTable\"><tbody><tr><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:112px\"><p>pH<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:35px\"><p>1<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>2<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>3<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>4<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>5<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:33px\"><p>6<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>7<\/p><\/td><\/tr><tr><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:112px\"><p>CuCl产率(%)<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:35px\"><p>70<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>90<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>82<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>78<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>75<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:33px\"><p>72<\/p><\/td><td style=\"border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#000000;border-left-style:solid;border-left-width:1px;border-right-color:#000000;border-right-style:solid;border-right-width:1px;border-top-color:#000000;border-top-style:solid;border-top-width:1px;vertical-align:top;width:28px\"><p>70<\/p><\/td><\/tr><\/tbody><\/table><p> &nbsp; &nbsp; 当pH较大时,CuCl晶体产率较低,其原因是_______。<\/p><p> &nbsp; &nbsp;(3) 析出的CuCl晶体不用水而用乙醇洗涤的目的是________。<\/p><p> &nbsp; &nbsp;(4) 为了更好体现绿色化学思想,有人提出如下方案:<\/p><p>方案一:可将上述X稀溶液用于废铜的处理(如下所示),则Y可以为______(填化学式)。<\/p><p style=\"text-align:center\"><img src=\"http://10.0.0.54:18970/rc/v1/common/get_file/c55bd97dea1d7bdf0fa14d2389889092.png\" width=\"250\" height=\"72\"><\/p><p>方案二:①中Cu与浓H<span style=\"vertical-align:sub\">2<\/span>SO<span style=\"vertical-align:sub\">4<\/span>反应所得SO<span style=\"vertical-align:sub\">2<\/span>和CuSO<span style=\"vertical-align:sub\">4<\/span>用于②中CuCl的制备,理论上_______(“需要” 或“不需要” )另外补充SO<span style=\"vertical-align:sub\">2<\/span>,原因是_________(结合化学方程式回答)。<\/p>",
+      "level": 0.8,
+      "question_content": "(  )联结由于结构简单、装拆方便、对中性好，因此广泛用于高速精密的传动中",
       "parent_id": null,
       "child_question_list": null,
-      "question_id": "3e2e107a-3c9d-48f0-a4b2-fac880101053",
-      "question_note": null,
-      "question_type": "108000",
-      "answer_list": null,
-      "item_list": null
-    },
-    {
-      "level": 0.5,
-      "question_content": "<p>下列图示与对应的叙述相符的是     (  )<\/p><p><img title=\"clip_image002.gif\" border=\"0\" hspace=\"0\" src=\"http://10.0.0.54:18970/rc/v1/common/get_file/b65cb0339e0575922f49c70a727d69ec.gif\" width=\"246\" height=\"83\"><\/p><p>",
-      "parent_id": null,
-      "child_question_list": null,
-      "question_id": "5628e6b6-4057-4114-bdcc-9716e1ac7868",
-      "question_note": "<p>用已知浓度盐酸滴定未知浓度某碱溶液时最好选用甲基橙作指示剂,且开始时pH变化缓慢,A项错误。图Ⅱ中t<sub>2<\/sub>时刻,各物质的物质的量没有变化,但反应速率突然增大,且平衡向右移动,说明改变的条件可能是缩小容器体积,B项正确。设溶液中明矾的物质的量为1 mol,则当滴加的Ba(OH)<sub>2<\/sub>的物质的量分别在0~1.5 mol和1.5mol~2.0mol时,所发生反应的化学方程式分别为:①2KAl(SO<sub>4<\/sub>)<sub>2<\/sub>+3Ba(OH)<sub>2<\/sub>=K<sub>2<\/sub>SO<sub>4<\/sub>+3BaSO<sub>4<\/sub>+2Al(OH)<sub>3<\/sub>↓,②K<sub>2<\/sub>SO<sub>4<\/sub>+2Al(OH)<sub>3<\/sub>+Ba(OH)<sub>2<\/sub>=2KAlO<sub>2<\/sub>+BaSO<sub>4<\/sub>↓+4H<sub>2<\/sub>O,由方程式①知,当加入了1.5molBa(OH)<sub>2<\/sub>时,生成沉淀的质量为1.5mol×233g/mol+1mol×78g/mol=427.5g;由方程式②知,当继续滴加0.5molBa(OH)<sub>2<\/sub>时,会生0.5molBaSO<sub>4<\/sub>沉淀同时溶解1mol Al(OH)<sub>3<\/sub>,沉淀的总物质的量将减少0.5mol,而沉淀的质量却增加了0.5mol×233g/mol-78g=38.5g,这说明把明矾溶液中Al3+恰好沉淀完全时,生成沉淀的总的物质的量最大,把SO<sub>4<\/sub><sup>2<\/sup><sup>-<\/sup>沉淀完全时,生成沉淀的质量最大,即图中加入15mLBa(OH)2溶液时,Al<sup>3<\/sup><sup>+<\/sup>恰好沉淀完全,加入20mLBa(OH)<sub>2<\/sub>溶液时,生成的Al(OH)<sub>3<\/sub>又会恰好完全溶解,故C项错误。<\/p><p>pH相等的两种酸,稀释过程中,强酸的pH变化大,弱酸的pH变化小,因为弱酸溶液中存在电离平衡,稀释过程中电离平衡右移,会继续电离出H+,故图中曲线a对应的应是醋酸,D项错误。<\/p>",
+      "question_id": "46b31a23-8c5e-4aea-b74f-0c6e10776c13",
+      "question_note": "<p>本题考查学生对常用危险化学品标志的识别。题中图标是易燃物质的标志。<\/p>",
       "question_type": "108000",
       "answer_list": [         {
         "score": 0,
         "sort_no": 0,
         "question_answer_content": "1"
       }],
-      "item_list":          [
+      "item_list":[
         {
           "sort_no": 0,
-          "is_right": false,
-          "question_item_content": "图Ⅰ表示盐酸滴加到0.1mol/L某碱溶液得到的滴定曲线,用已知浓度盐酸滴定未知浓度该碱时最好选取酚酞作指示剂<\/p><p>"
-        },
-        {
-          "sort_no": 1,
           "is_right": true,
-          "question_item_content": "图Ⅱ表示一定条件下进行的反应2SO<sub>2<\/sub>+O<sub>2<\/sub><img title=\"clip_image002.gif\" src=\"http://10.0.0.54:18970/rc/v1/common/get_file/542d0bb561fd38924d46259ffc7ae2ed.gif\">2SO<sub>3 <\/sub>各成分的物质的量变化,<em>t<\/em><sub>2<\/sub>时刻改变的条件可能是缩小容器体积<\/p><p>"
-        },
-        {
-          "sort_no": 2,
-          "is_right": false,
-          "question_item_content": "图Ⅲ表示某明矾溶液中加入Ba(OH)<sub>2<\/sub>溶液,沉淀的质量与加入Ba(OH)<sub>2<\/sub>溶液体积的关系,在加入20 mL Ba(OH)<sub>2<\/sub>溶液时铝离子恰好沉淀完全<\/p><p>"
-        },
-        {
-          "sort_no": 3,
-          "is_right": false,
-          "question_item_content": "图Ⅳ表示pH相同的盐酸与醋酸中分别加入水后溶液pH的变化,其中曲线a对应的是盐酸"
-        }
-      ]
-    },
-    {
-      "level": 0.5,
-      "question_content": "<p><span> <\/span>设N<span style=\"vertical-align:sub\">A<\/span>为阿伏加德罗常数的值。下列说法中正确的是( &nbsp; &nbsp; )<\/p><p>2<\/span>时,转移的电子数一定为0.2N<span style=\"vertical-align:sub\">A<\/span><\/p>",
-      "parent_id": null,
-      "child_question_list": null,
-      "question_id": "c48f271a-8a7b-4cbb-8732-cf545e7177d0",
-      "question_note": null,
-      "question_type": "108000",
-      "answer_list": [         {
-        "score": 0,
-        "sort_no": 0,
-        "question_answer_content": "2"
-      }],
-      "item_list":          [
-        {
-          "sort_no": 0,
-          "is_right": false,
-          "question_item_content": "在密闭容器中加入1 mol N<span style=\"vertical-align:sub\">2<\/span>和3 mol H<span style=\"vertical-align:sub\">2<\/span>,充分反应生成NH<span style=\"vertical-align:sub\">3<\/span>分子数为2N<span style=\"vertical-align:sub\">A<\/span> <\/p><p>"
+          "question_item_content": "A.普通平建"
         },
         {
           "sort_no": 1,
           "is_right": false,
-          "question_item_content": "标准状况下,22.4 L的CCl<span style=\"vertical-align:sub\">4<\/span>分子中含有共价键数为4N<span style=\"vertical-align:sub\">A<\/span><\/p><p>"
-        },
-        {
-          "sort_no": 2,
-          "is_right": true,
-          "question_item_content": "常温常压下,1 mol NaHSO<span style=\"vertical-align:sub\">4<\/span>晶体中含有2N<span style=\"vertical-align:sub\">A<\/span>个离子<\/p><p>"
-        },
-        {
-          "sort_no": 3,
-          "is_right": false,
-          "question_item_content": "电解饱和食盐水,当阴极产生2.24L H<span style=\"vertical-align:sub\">"
-        }
-      ]
-    },
-    {
-      "level": 0.5,
-      "question_content": "<p> 物质的量为0. 10 mol的镁条在只含有CO<span style=\"vertical-align:sub\">2<\/span>和O<span style=\"vertical-align:sub\">2<\/span>混合气体的容器中燃烧(产物不含碳酸镁), 反应后容器内固体物质的质量不可能为(  )<\/p><p>",
-      "parent_id": null,
-      "child_question_list": null,
-      "question_id": "da3918d7-2676-4c7d-bbfc-79e7374f747b",
-      "question_note": null,
-      "question_type": "108000",
-      "answer_list": [         {
-        "score": 0,
-        "sort_no": 0,
-        "question_answer_content": "3"
-      }],
-      "item_list":          [
-        {
-          "sort_no": 0,
-          "is_right": false,
-          "question_item_content": "3. 2 g"
-        },
-        {
-          "sort_no": 1,
-          "is_right": false,
-          "question_item_content": "4. 0 g"
+          "question_item_content": "B.普通楔键"
         },
         {
           "sort_no": 2,
           "is_right": false,
-          "question_item_content": "4. 2 g"
+          "question_item_content": "C.钩头楔键"
         },
         {
           "sort_no": 3,
-          "is_right": true,
-          "question_item_content": "4. 6 g"
+          "is_right": false,
+          "question_item_content": "D.切向键"
         }
       ]
     },
     {
       "level": 0.8,
-      "question_content": "<p>下列叙述正确的是(  )<\/p><p>A. 乙酸与丙二酸互为同系物<\/p><p>B. 不同元素的原子构成的分子只含极性共价键<\/p><p>C<img src=\"http://10.0.0.54:18970/rc/v1/common/get_file/fd1a19c44de5bb1a0f433daee1491ea0.png\" width=\"22\" height=\"20\">U和<img src=\"http://10.0.0.54:18970/rc/v1/common/get_file/10c0b22be36b49cbcae074bf00620c24.png\" width=\"20\" height=\"20\">U是中子数不同质子数相同的同种核素<\/p><p>D. 短周期第ⅣA与ⅦA族元素的原子间构成的分子, 均满足原子最外层8电子结构<\/p>",
+      "question_content": "渐开线的形状取决于基圆的大小，基圆越小，渐开线 ( )",
       "parent_id": null,
       "child_question_list": null,
-      "question_id": "26abd53a-93fc-4156-b369-9e8d95866e24",
-      "question_note": null,
+      "question_id": "46b31a23-8c5e-4aea-b74f-0c6e10776c14",
+      "question_note": "<p>本题考查学生对常用危险化学品标志的识别。题中图标是易燃物质的标志。<\/p>",
       "question_type": "108000",
-      "answer_list": null,
-      "item_list": null
-    },
-    {
-      "level": 0.8,
-      "question_content": "<p>下列有关物质分类或归类正确的是       (       )<\/p><p>①混合物:盐酸、漂白粉、水玻璃、水银   ②化合物:CaCl<span style=\"vertical-align:sub\">2<\/span>、NaOH、HCl、HD    ③电解质:明矾、石膏、冰醋酸、氯化银   ④同素异形体:C<span style=\"vertical-align:sub\">60<\/span>、C<span style=\"vertical-align:sub\">70<\/span>、金刚石、石墨<\/p><p>⑤放热反应:盐酸与氢氧化钠、碳酸钙高温分解、甲烷燃烧<\/p><p>",
-      "parent_id": null,
-      "child_question_list": null,
-      "question_id": "e7d7729c-5d0d-4c8c-9997-00e0f782931a",
-      "question_note": "<p>①中的水银和②中的HD都属于单质,故A、B项都不正确;⑤中的碳酸钙高温分解属于吸热反应,故D项不正确,C项正确。<\/p>",
-      "question_type": "108000",
-      "answer_list":          [
-        {
-          "score": 0,
-          "sort_no": 0,
-          "question_answer_content": "1"
-        },
-        {
-          "score": 0,
-          "sort_no": 2,
-          "question_answer_content": "1"
-        },
-        {
-          "score": 0,
-          "sort_no": 1,
-          "question_answer_content": "2"
-        },
-        {
-          "score": 0,
-          "sort_no": 3,
-          "question_answer_content": "0"
-        }
-      ],
-      "item_list":          [
+      "answer_list": [         {
+        "score": 0,
+        "sort_no": 0,
+        "question_answer_content": "1"
+      }],
+      "item_list":[
         {
           "sort_no": 0,
           "is_right": false,
-          "question_item_content": "①③④"
+          "question_item_content": "A.平直"
         },
         {
           "sort_no": 1,
           "is_right": false,
-          "question_item_content": "②③④"
+          "question_item_content": "B.倾斜"
         },
         {
           "sort_no": 2,
           "is_right": true,
-          "question_item_content": "③④"
+          "question_item_content": "C.弯曲"
         },
         {
           "sort_no": 3,
           "is_right": false,
-          "question_item_content": "④⑤"
+          "question_item_content": "D.平行"
         }
       ]
     },
     {
-      "level": 0.5,
-      "question_content": "<p><span><\/span>下列叙述错误的是   &nbsp; ( )<\/p><p>",
+      "level": 0.8,
+      "question_content": "要将旋转运动转化成平稳又能产生很大轴向力的直线运动可采用(  )传动。",
       "parent_id": null,
       "child_question_list": null,
-      "question_id": "8b28dd0a-ce6b-4b93-8072-69221264b84c",
-      "question_note": null,
+      "question_id": "46b31a23-8c5e-4aea-b74f-0c6e10776c15",
+      "question_note": "<p>本题考查学生对常用危险化学品标志的识别。题中图标是易燃物质的标志。<\/p>",
       "question_type": "108000",
-      "answer_list":          [
-        {
-          "score": 0,
-          "sort_no": 1,
-          "question_answer_content": "0"
-        },
-        {
-          "score": 0,
-          "sort_no": 0,
-          "question_answer_content": "0"
-        }
-      ],
-      "item_list":          [
+      "answer_list": [         {
+        "score": 0,
+        "sort_no": 0,
+        "question_answer_content": "1"
+      }],
+      "item_list":[
         {
           "sort_no": 0,
-          "is_right": true,
-          "question_item_content": "Al<span style=\"vertical-align:sub\">2<\/span>(SO<span style=\"vertical-align:sub\">4<\/span>) <span style=\"vertical-align:sub\">3<\/span>可除去酸性废水中的悬浮颗粒<\/p><p>"
-        },
-        {
-          "sort_no": 1,
           "is_right": false,
-          "question_item_content": "氯气与石灰乳反应能得到含氯漂白剂<\/p><p>"
+          "question_item_content": "A.齿条"
+        },
+        {
+          "sort_no": 1,
+          "is_right": true,
+          "question_item_content": "B.蜗杆"
         },
         {
           "sort_no": 2,
           "is_right": false,
-          "question_item_content": "燃煤时加入适量石灰石,可减少废气中SO<span style=\"vertical-align:sub\">2<\/span>的排放<\/p><p>"
+          "question_item_content": "C.螺旋"
         },
         {
           "sort_no": 3,
           "is_right": false,
-          "question_item_content": "工业上硝酸可用于制化肥、农药、炸药和染料等"
+          "question_item_content": "D.齿轮"
         }
       ]
     }

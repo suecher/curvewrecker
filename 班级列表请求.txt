@@ -1,0 +1,30 @@
+http://120.25.222.135:7090/rc/v1/class/get_user_list
+
+User-Agent: Fiddler
+Host: 120.25.222.135:7090
+Content-Type: application/json;charset=utf-8
+Content-Length: 328
+
+
+{
+"pagination": {
+"pageNo": "0",
+"numPerPage": "10"
+},
+"searchConditionList": [
+{
+"key": "class_id",
+"value": "a40f32b8-5e03-482b-927f-045a1b117db2",
+"operator": "EQUAL"
+},{
+"key": "user_type_id",
+"value": "600003",
+"operator": "EQUAL"
+}],
+"orderMethodList": [{
+"field": "effective_time",
+"method": "ASC"
+}]
+}
+
+

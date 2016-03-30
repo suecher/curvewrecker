@@ -3,8 +3,8 @@
         <div class="modal-content bg" style="margin-top: 200px;height: 400px;border-radius: 16px;opacity: 0.9">
         <div class="row">
             <div class="col-sm-4">
-                <div class="pull-right" style="font-family: '微软雅黑';font-size:24px;margin-top: 60px;" class="pull-left">露露</div>
-                <img src="img/web/h8.png" alt="" class="pull-right" style="width:120px;height: 120px;">
+                <div class="pull-right" style="font-family: '微软雅黑';font-size:24px;margin-top: 60px;" class="pull-left">{{pkMeInfo.realname}}</div>
+                <img ng-src={{'img/web/'+pkMeInfo.headImg}} alt="" class="pull-right" style="width:120px;height: 120px;">
 
 
             </div>
@@ -12,34 +12,34 @@
                 <img src="img/web/vs.png" class="center-block" alt="" style="width: 120px;height: 68px;margin-top: 40px;">
             </div>
             <div class="col-sm-4">
-                <div class="pull-left" style="font-family: '微软雅黑';font-size:24px;margin-top: 60px;" class="pull-left">露露</div>
-                <img src="img/web/h7.png" alt="" class="pull-left" style="width:120px;height: 120px;">
+                <div class="pull-left" style="font-family: '微软雅黑';font-size:24px;margin-top: 60px;" class="pull-left">{{pkRivalInfo.realname}}</div>
+                <img ng-src={{'img/web/'+pkRivalInfo.headImg}} alt="" class="pull-left" style="width:120px;height: 120px;">
 
             </div>
         </div>
-            <div class="text-center" style="font-family: '微软雅黑';font-size:28px;margin-top: 40px;color: red;">正确率: 90%</div>
+            <div class="text-center" style="font-family: '微软雅黑';font-size:28px;margin-top: 40px;color: red;">正确率: {{resultInfo.accuracy}}%</div>
             <div style="margin-top: 30px;">
                 <div class="col-lg-offset-3 col-lg-3">
                     <img src="img/web/usericon.png" alt="" class="pull-left" style="width: 45px;height: 45px;">
-                    <div class="pull-left"  style="font-family: '微软雅黑';font-size:18px;margin-top: 10px;color: #955848;padding-left: 30px;">经验: 50</div>
+                    <div class="pull-left"  style="font-family: '微软雅黑';font-size:18px;margin-top: 10px;color: #955848;padding-left: 30px;">经验: {{resultInfo.experience}}</div>
                 </div>
                 <div class="col-lg-3">
                     <img src="img/web/usericon2.png" alt="" class="pull-left" style="width: 45px;height: 45px;">
-                    <div class="pull-left"  style="font-family: '微软雅黑';font-size:18px;margin-top: 10px;color: #955848;padding-left: 30px;">积分: 50</div>
+                    <div class="pull-left"  style="font-family: '微软雅黑';font-size:18px;margin-top: 10px;color: #955848;padding-left: 30px;">积分: {{resultInfo.point}}</div>
                 </div>
             </div>
             <div>
-                <img src="img/web/victory.png" alt="" style="position: absolute;bottom: 40px;" class="pull-right">
+                <img ng-src="{{resultInfo.img}}" src="" alt="" style="position: absolute;bottom: 40px;" class="pull-right">
             </div>
             <div style="margin-top: 130px;">
                 <div class="col-sm-4">
-                    <img src="img/web/btncontinuepk.png" alt="" style="cursor: pointer;width: 160px;" class="center-block">
+                    <img src="img/web/btncontinuepk.png" alt="" style="cursor: pointer;width: 160px;" class="center-block" ng-click="againpk()">
                 </div>
                 <div class="col-sm-4">
-                    <img src="img/web/btnquestionanalyze.png" alt="" style="cursor: pointer;width: 160px;" class="center-block">
+                    <img src="img/web/btnquestionanalyze.png" alt="" style="cursor: pointer;width: 160px;" class="center-block" ng-click="questionanalyze()">
                 </div>
                 <div class="col-sm-4">
-                    <img src="img/web/btnbackarena.png" alt="" style="cursor: pointer;width: 160px;" class="center-block">
+                    <img src="img/web/btnbackarena.png" alt="" style="cursor: pointer;width: 160px;" class="center-block" ng-click="backmain()">
                 </div>
             </div>
         </div>

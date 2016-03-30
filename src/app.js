@@ -3,7 +3,8 @@
  */
 var express = require('./config/express');
 var mongodb = require('./config/mongoose');
+var io = require('./config/socket.io');
 
-var db = mongodb = mongodb();
+var db = mongodb();
 var app = express();
 module.exports = app;

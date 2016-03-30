@@ -3,29 +3,32 @@
  */
 var express = require('express');
 var bodyParser = require('body-parser');
-var path = require('path');
 
 module.exports = function(){
     console.log('init express...');
     var app = express();
     app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended:true}));
 
     //app.use(express.static(path.join(__dirname,'public')));
 
     //app.set('view engine','./views');
     //app.set('view engine','../views2');
-    app.set('views',  'views');
+    app.set('views', './../views');
     app.set('view engine','ejs');
 
-    app.use(express.static("./public"));
+    app.use(express.static("../public"));
 
     require('../app/routes/news.server.routes')(app);
     require('../app/routes/main.server.routes')(app);
     require('../app/routes/props.server.routes')(app);
-
+    require('../app/routes/question.server.routes')(app);
+    require('../app/routes/pkrecord.server.routes')(app);
+    require('../app/routes/user.server.routes')(app);
 
     app.route('/testview').get(function(req,res){
-        res.send('meesage test..');
+
+        res.render('mobile',{title:'wwww'});
     });
 
     app.use(function(req,res,next){

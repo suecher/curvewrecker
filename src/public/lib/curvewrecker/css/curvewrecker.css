@@ -3,6 +3,11 @@
     background-image: url(../../../img/web/bg.jpg);
     background-size: 100%;
 }
+.bg2
+{
+    background-image: url(../../../img/web/bg.jpg);
+    background-size: 100%;
+}
 .itembg
 {
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6c58f), to(#daae6e));

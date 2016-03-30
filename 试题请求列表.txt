@@ -1,0 +1,15 @@
+
+
+
+
+User-Agent: Fiddler
+Host: 120.25.222.135:7080
+Accept-Charset: utf-8
+Content-Type: application/json;charset=utf-8
+Content-Length: 135
+
+
+URL:http://120.25.222.135:7080/rc/v1/question/getGameQuestionList
+
+
+参数{"user_id":"7d809c8c-4ad5-4266-89e2-9bed3a32526c","ruser_id":"7d809c8c-4ad5-4266-89e2-9bed3a32666b","channelId":"100000","pk_type":"0"}

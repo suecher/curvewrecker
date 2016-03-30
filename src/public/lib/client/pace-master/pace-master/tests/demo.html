@@ -1,0 +1,53 @@
+<head>
+  <link rel="stylesheet" href="../themes/blue/pace-theme-center-simple.css" />
+
+  <script>
+    paceOptions = {
+      elements: true
+    };
+  </script>
+  <script src="../pace.js"></script>
+  <script>
+    function load(imgpath){
+      var x = new XMLHttpRequest();
+      var x1 = new XMLHttpRequest();
+      x.open('GET', imgpath, true);
+      //x1.open('GET', "3.jpg", true);
+      x.send();
+      //x1.send();
+    };
+
+
+    load("../../../img/bg.png");
+    load("../../../img/bgshop.png");
+    load("../../../img/btnonlinePK.png");
+    load("../../../img/btnselecthead.png");
+    load("../../../img/pkbg1.png");
+    load("../../../img/pkbg2.png");
+    load("../../../img/userbg.png");
+
+
+
+//    setTimeout(function(){
+//      Pace.ignore(function(){
+//        load(3100);
+//      });
+//    }, 4000);
+
+    Pace.on('hide', function(){
+      console.log('done');
+      window.location.href="test2.html";
+    });
+  </script>
+
+<body>
+  <!--<input id="range" type="range" min="0" max="100">-->
+  <!--<script>-->
+    <!--range.addEventListener('input', function(){-->
+      <!--document.querySelector('.pace').classList.remove('pace-inactive');-->
+      <!--document.querySelector('.pace').classList.add('pace-active');-->
+
+      <!--document.querySelector('.pace-progress').setAttribute('data-progress-text', range.value + '%');-->
+      <!--document.querySelector('.pace-progress').setAttribute('style', '-webkit-transform: translate3d(' + range.value + '%, 0px, 0px)');-->
+    <!--});-->
+  <!--</script>-->

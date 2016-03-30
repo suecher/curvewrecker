@@ -3,9 +3,10 @@
  */
 var mongoose = require('mongoose');
 var UserByProps = mongoose.model('UserByProps');
+var resultobjs = require('../models/result.server.model');
 
 module.exports = {
-    create:function(_userbyprops,next){
+    create:function(_userbyprops,callback){
         var userbyprops = new UserByProps({
             userId:_userbyprops.userId,
             propsId:_userbyprops.propsId,
@@ -13,8 +14,16 @@ module.exports = {
         });
 
         userbyprops.save(function(err){
-            console.log('save status:',err ? 'failed:'+err.message:'success');
+            if(err){
+                callback(resultobjs.createResult(false,'用户添加道具失败',err.message));
+                return;
+            }
+            callback(resultobjs.createResult(true,null,null,userbyprops));
+
+            console.log('save 道具:',err ? 'failed:'+err.message:'success');
         });
+
+
     },
     update:function(_userbyprops,next){
 
@@ -31,9 +40,9 @@ module.exports = {
             var currentpropsId;
             for(var key in docs){
                 if(docs[key].propsId == _userbyprops.propsId){
-                    currentpropsId=  docs[key]._id;
 
-                    UserByProps.update({'_id':currentpropsId},{$inc:{'amount':1}},null,function(err,data){
+                    currentpropsId=  docs[key]._id;
+                    UserByProps.update({'_id':currentpropsId},{$inc:{'amount':_userbyprops.amount}},null,function(err,data){
                         if(err){
                             console.log(err);
                             return;

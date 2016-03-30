@@ -11,7 +11,7 @@ var pkRecordSchema = mongoose.Schema({
     victory:Boolean,
     point:Number,
     experience:Number,
-    classOrAll:Boolean,
+    classOrAll:Boolean, //true 班级PK
     Question:String
 });
 

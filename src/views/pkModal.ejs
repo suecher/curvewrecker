@@ -1,71 +1,56 @@
 <div class="modal fade bs-example-modal-lg" id="pkModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" >
-        <div class="modal-content bg " style="margin-top: 100px;height: 500px;border-radius: 16px;opacity: 0.9">
+        <div class="modal-content bg" style="margin-top: 100px;min-height: 540px;border-radius: 16px;opacity: 0.9">
             <div class="row" style="margin-top: 15px;">
                 <div class="col-sm-4">
-                    <img src="img/web/h2.png" class="center-block" alt="" style="width: 90px;height: 90px;">
-                    <div class="text-center" style="font-family: '微软雅黑';font-size:16px;">露露</div>
+                    <img ng-src={{"img/web/"+pkMeInfo.headImg}} class="center-block" alt="" style="width: 90px;height: 90px;">
+                    <div class="text-center" style="font-family: '微软雅黑';font-size:16px;">{{pkMeInfo.realname}}</div>
                 </div>
                 <div class="col-sm-4">
                     <img src="img/web/vs.png" class="center-block" alt="" style="width: 120px;height: 68px;">
-                    <div class="text-center" style="font-size: 32px;font-family: '微软雅黑';font-style: oblique;color: #955848;">00:60</div>
+                    <div class="text-center" style="font-size: 32px;font-family: '微软雅黑';font-style: oblique;color: #955848;">{{countdown}}</div>
                 </div>
                 <div class="col-sm-4">
-                    <img src="img/web/h1.png" class="center-block" alt="" style="width: 90px;height: 90px;">
-                    <div class="text-center" style="font-family: '微软雅黑';font-size:16px;">露露</div>
+                    <img ng-src={{"img/web/"+pkRivalInfo.headImg}} class="center-block" alt="" style="width: 90px;height: 90px;">
+                    <div class="text-center" style="font-family: '微软雅黑';font-size:16px;">{{pkRivalInfo.realname}}</div>
                 </div>
             </div>
             <br>
             <div>
                 <div style="font-family: '微软雅黑';font-size:16px;" class="text-center">
-                    3.词语：鼠目寸光、雪中送炭、事半功倍、腰缠万贯、名副其实的反义词，最恰当的一组是(     )。
+                    {{questionContent}}
                 </div>
-
-                <div class="questionItembg Analyze" >
-                    A.胸怀大志 锦上添花 一箭双雕 一贫如洗
+                <div ng-repeat="item in questionItem_list">
+                    <div class="questionItembg Analyze {{item.is_right}}" ng-click="clickAnswer($index,pkquestionid,item.sort_no,item.is_right,item.question_item_content)">
+                        {{item.question_item_content}}
+                    </div>
                 </div>
-
-                <div class="questionItembg Analyze">
-                    B.目光远大 莫不关心 事倍功半 衣衫褴褛
-                </div>
-
-                <div class="questionItembg Analyze">
-                    C.高瞻远瞩 锦上添花 事倍功半 一贫如洗
-                </div>
-
-                <div class="questionItembg Analyze">
-                    D.高瞻远瞩 莫不关心 一箭双雕 衣衫褴褛
-                </div>
-
             </div>
             <div>
-                <div class="text-right" style="font-family: '微软雅黑';font-size:24px;font-style: oblique;margin-right: 60px;">1/10</div>
+                <div class="text-right" style="font-family: '微软雅黑';font-size:24px;font-style: oblique;margin-right: 60px;">{{current_question}}</div>
             </div>
 
-            <div>
+            <div style="min-height: 70px;">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
                     <div class="pull-left" style="margin-left: 40px;">
-                        <img src="img/web/item1.png" alt="" style="width: 50px;height: 50px;cursor: pointer">
-                        <div class="text-center" style="font-size: 14px;font-family: '微软雅黑';font-style: oblique;color: #955848;">x 2</div>
+                        <img src="img/web/item1.png" alt="" style="width: 50px;height: 50px;cursor: pointer" ng-click="clientuseprop(1)">
+                        <div class="text-center" style="font-size: 14px;font-family: '微软雅黑';font-style: oblique;color: #955848;">{{ngProps1}}</div>
                     </div>
                     <div class="pull-left" style="margin-left: 35px;">
-                        <img src="img/web/item2.png" alt="" style="width: 50px;height: 50px;cursor: pointer">
-                        <div class="text-center" style="font-size: 14px;font-family: '微软雅黑';font-style: oblique;color: #955848;">x 2</div>
+                        <img src="img/web/item2.png" alt="" style="width: 50px;height: 50px;cursor: pointer" ng-click="clientuseprop(2)">
+                        <div class="text-center" style="font-size: 14px;font-family: '微软雅黑';font-style: oblique;color: #955848;">{{ngProps2}}</div>
                     </div>
                     <div class="pull-left" style="margin-left: 35px;">
-                        <img src="img/web/item3.png" alt="" style="width: 50px;height: 50px;cursor: pointer">
-                        <div class="text-center" style="font-size: 14px;font-family: '微软雅黑';font-style: oblique;color: #955848;">x 2</div>
+                        <img src="img/web/item3.png" alt="" style="width: 50px;height: 50px;cursor: pointer" ng-click="clientuseprop(3)">
+                        <div class="text-center" style="font-size: 14px;font-family: '微软雅黑';font-style: oblique;color: #955848;">{{ngProps3}}</div>
                     </div>
                 </div>
                 <div class="col-sm-4"></div>
             </div>
-            <br>
-            <br>
-            <div>
-                <img src="img/web/btnclose.png" class="pull-right" alt="" style="width: 80px;height: 55px;cursor: pointer;">
+            <div style="min-height: 65px;">
+                <img src="img/web/btnclose.png" class="pull-right" alt="" style="width: 80px;height: 55px;cursor: pointer;" ng-click="closePk()">
             </div>
-
         </div>
     </div>
 </div>

@@ -1,0 +1,389 @@
+{
+  "question_list": [
+    {
+      "question_type": "108000",
+      "question_content": "计算下列各式中S的值,能设计算法求解的是t(　　)<br/>①S=<img src="http://10.0.0.53:8080/rc/v1/common/get_file/883885f89fe4b351b9ded66423903df2.gif"><br/>②S=<img src="http://10.0.0.53:8080/rc/v1/common/get_file/883885f89fe4b351b9ded66423903df2.gif">+…<br/>③S=<img src="http://10.0.0.53:8080/rc/v1/common/get_file/91ec950109d36460aac1d57f78bac11f.gif"> (n≥1且n∈N<sup>*</sup>)",
+      "question_note": "",
+      "level": 0.6,
+      "question_id": "a1f35d88-7fb3-4660-917d-8e1fa5a06eb0",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "①②",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "①③",
+          "sort_no": 1,
+          "is_right": true
+        },
+        {
+          "question_item_content": "②③",
+          "sort_no": 2,
+          "is_right": false
+        },
+        {
+          "question_item_content": "①②③",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "1",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>下列关于程序框图的说法正确的是t(　　)</p>",
+      "question_note": null,
+      "level": 0.6,
+      "question_id": "dcd8b157-1f3c-490b-8202-b1ce4ac4baef",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>程序框图是描述算法的语言</p>",
+          "sort_no": 0,
+          "is_right": true
+        },
+        {
+          "question_item_content": "<p>在程序框图中,一个判断框最多只能有1个退出点</p>",
+          "sort_no": 1,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>程序框图虽可以描述算法,但不如用自然语言描述算法直观</p>",
+          "sort_no": 2,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>程序框图和流程图不是一个概念</p>",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "0",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>下列所给问题中,不可以设计一个算法求解的是t(　　)</p>",
+      "question_note": null,
+      "level": 0.6,
+      "question_id": "d3737cb2-afaa-46b5-a5f8-09dc22709f46",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>二分法求方程x<sup>2</sup>-3=0的近似解</p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>解方程组<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/9e495da6a27ebfb6c42127c3176c758a.gif"/></p>",
+          "sort_no": 1,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>求半径为3的圆的面积</p>",
+          "sort_no": 2,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>判断函数y=x<sup>2</sup>在R上的单调性</p>",
+          "sort_no": 3,
+          "is_right": true
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "3",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>给出下列程序框图:<br/><img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/fe7f8a53d097d53cb0824351b7ed71f8.jpg"/><br/>若输出的结果为2,则①处的执行框内应填的是t(　　)</p>",
+      "question_note": null,
+      "level": 0.7,
+      "question_id": "0505adbb-6c76-4fe9-95b0-2405a9027769",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>x=2</p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>b=2</p>",
+          "sort_no": 1,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>x=1</p>",
+          "sort_no": 2,
+          "is_right": true
+        },
+        {
+          "question_item_content": "<p>a=5</p>",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "2",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>对终端框叙述正确的是t(　　)</p>",
+      "question_note": null,
+      "level": 0.7,
+      "question_id": "b44a6067-52a8-4669-9fad-e249f48792cf",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>表示一个算法的起始和结束,框图是<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/443ff8d478bbd24a057aa828365d723d.jpg"/></p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>表示一个算法输入和输出的信息,框图是<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/bc2b0f3e0422451dc302af9e7f352b16.jpg"/></p>",
+          "sort_no": 1,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>表示一个算法的起始和结束,框图是<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/6ee956d3808abc040cc02b770a5b20cc.jpg"/></p>",
+          "sort_no": 2,
+          "is_right": true
+        },
+        {
+          "question_item_content": "<p>表示一个算法输入和输出的信息,框图是<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/443ff8d478bbd24a057aa828365d723d.jpg"/></p>",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "2",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>关于一元二次方程x<sup>2</sup>-5x+6=0的求根问题,下列说法正确的是t(　　)</p>",
+      "question_note": null,
+      "level": 0.6,
+      "question_id": "d727a2f9-6914-4f47-8d94-38b0b51ff1cb",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>只能设计一种算法</p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>可以设计两种算法</p>",
+          "sort_no": 1,
+          "is_right": true
+        },
+        {
+          "question_item_content": "<p>不能设计算法</p>",
+          "sort_no": 2,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>不能根据解题过程设计算法</p>",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "1",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>计算下列各式中S的值,能设计算法求解的是t(　　)<br/>①S=<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/883885f89fe4b351b9ded66423903df2.gif"/><br/>②S=<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/883885f89fe4b351b9ded66423903df2.gif"/>+…<br/>③S=<img src="http://tkfile-10012356.file.myqcloud.com/2016-01-12/91ec950109d36460aac1d57f78bac11f.gif"/> (n≥1且n∈N<sup>*</sup>)</p>",
+      "question_note": "<p style="font-size: 20px; font-family: 宋体;">算法的概念考查3</p>",
+      "level": 0.9,
+      "question_id": "ac27bd13-86a1-4c07-bfab-21e55b179014",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>①②</p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>①③</p>",
+          "sort_no": 1,
+          "is_right": true
+        },
+        {
+          "question_item_content": "<p>②③</p>",
+          "sort_no": 2,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>①②③</p>",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "1",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>下列关于流程线的说法,不正确的是t(　　)</p>",
+      "question_note": null,
+      "level": 0.6,
+      "question_id": "d50dea45-b345-49aa-83d6-06d3c0a3e9ea",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>流程线表示算法步骤执行的顺序,用来连接程序框</p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>流程线只要是上下方向就表示自上向下执行,可以不要箭头</p>",
+          "sort_no": 1,
+          "is_right": true
+        },
+        {
+          "question_item_content": "<p>流程线无论什么方向,总要按箭头的指向执行</p>",
+          "sort_no": 2,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>流程线是带有箭头的线,它可以画成折线</p>",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "1",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>任何一种算法都离不开的基本结构为t(　　)</p>",
+      "question_note": "<p>程序框图、顺序结构考查2</p>",
+      "level": 0.3,
+      "question_id": "060f975f-5e62-45a5-a19b-d8ddf8f335b2",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>逻辑结构</p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>条件结构</p>",
+          "sort_no": 1,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>循环结构</p>",
+          "sort_no": 2,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>顺序结构</p>",
+          "sort_no": 3,
+          "is_right": true
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "3",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    },
+    {
+      "question_type": "108000",
+      "question_content": "<p>下列关于算法的描述正确的是t(　　)</p>",
+      "question_note": "<p>算法的概念考查1</p>",
+      "level": 0.1,
+      "question_id": "edceaee1-cd4d-4ae2-a248-027a4578bb44",
+      "parent_id": null,
+      "item_list": [
+        {
+          "question_item_content": "<p>算法与求解一个问题的方法相同</p>",
+          "sort_no": 0,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>算法只能解决一个问题,不能重复使用</p>",
+          "sort_no": 1,
+          "is_right": false
+        },
+        {
+          "question_item_content": "<p>算法过程要一步一步执行,每步执行的操作必须确切</p>",
+          "sort_no": 2,
+          "is_right": true
+        },
+        {
+          "question_item_content": "<p>有的算法执行完后,可能无结果</p>",
+          "sort_no": 3,
+          "is_right": false
+        }
+      ],
+      "answer_list": [
+        {
+          "sort_no": 0,
+          "question_answer_content": "2",
+          "score": 0.0
+        }
+      ],
+      "child_question_list": null
+    }
+  ],
+  "responseStatus": {
+    "resultcode": 0,
+    "msg": "成功"
+  },
+  "total_num": 10
+}

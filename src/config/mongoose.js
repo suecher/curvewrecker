@@ -11,5 +11,6 @@ module.exports = function(){
     require('../app/models/props.server.model');
     require('../app/models/propsexchange.server.model');
     require('../app/models/userbyprops.server.model');
+    require('../app/models/pkrecord.server.model');
     return db;
 };
