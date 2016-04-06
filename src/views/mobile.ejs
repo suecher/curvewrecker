@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
 
 
-
     <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="/lib/client/jquery.fittext.js"></script>
     <script src="/lib/client/resLoader.js"></script>
@@ -289,10 +288,14 @@
 
 
         $("#classlistscrollbar").mCustomScrollbar();
+
+
+        //.mtemp.test.btnodal();
     });
 </script>
 <!--用户信息-->
 <div id="containerUser" class="container" style="display: none;">
+    <div id="temptestbtn">testBtn</div>
     <div class="glyphicon glyphicon-chevron-left pull-left" style="position: relative;font-size: 14px;top:14em;right:0.5em;color: #fff;" id="btnMainLeft"></div>
     <div class="glyphicon glyphicon-chevron-right pull-right" style="position: relative;font-size: 14px;top:14em;left:0.5em;color: #fff;" id="btnMainRight"></div>
     <div class="userbg center-block" style="padding: 0.5em 1em 1em 1em; width: 92%;">
@@ -618,6 +621,9 @@
 <script>
     $(document).ready(function(){
         //$("#victorymodal").show();
+        $("#temptestbtn").click(function(){
+            $("#resultModal").modal();
+        })
     })
 </script>
 <script>
